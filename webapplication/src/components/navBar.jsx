@@ -1,59 +1,78 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../images/logo.png";
 import S from "../images/S.png";
+import "./components.css";
 
 const NavBar = ({ user }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/home">
-          <img src={S} alt="SureWay Logo" height="30" />
+          <div
+            className="cardlogo d-flex align-items-center"
+            style={{
+              backgroundColor: "#E56717",
+              border: "none",
+            }}
+          >
+            <img src={S} alt="SureWay Logo" height="30" />
+          </div>
         </Link>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link" to="/Track">
-                Tracking
+                TRACKING
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/Bus">
-                Busses
+                VEHICLES
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/RegisterUser">
-                Register
+                REGISTRATIONS
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/UserRecord">
-                User Records
+                USERS
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/DriverRecord">
-                Driver Records
+                DRIVERS
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/ExtraService">
-                Services
+                SERVICES
+              </Link>
+            </li>
+          </ul>
+
+          <div className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/logout">
+                <i
+                  className="fa fa-sign-out"
+                  aria-hidden="true"
+                  style={{ fontSize: "30px" }}
+                ></i>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/adminDetails">
-                {user.username}
+                <i
+                  className="fa fa-user-circle"
+                  aria-hidden="true"
+                  style={{ fontSize: "30px" }}
+                ></i>
               </Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/logout">
-                Logout
-              </Link>
-            </li>
-          </ul>
+          </div>
         </div>
       </div>
     </nav>
