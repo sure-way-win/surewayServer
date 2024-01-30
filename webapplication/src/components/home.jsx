@@ -295,19 +295,10 @@ class Home extends Component {
                 height: "200px",
                 border: "none",
                 boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+                overflowY: "auto",
               }}
             >
-              <div class="card">
-                <div class="card-body">
-                  <h5 className="card-title">Driver records</h5>
-                  <p className="card-text">
-                    You can see records of all your drivers' here
-                  </p>
-                  <a href="/DriverRecord" className="btn btn-primary">
-                    Driver Records
-                  </a>
-                </div>
-              </div>
+              <AccidentAlers />
             </div>
           </div>
 
